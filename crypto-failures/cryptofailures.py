@@ -16,13 +16,6 @@ def getCookie(agent):
 
    return cookie
 
-def make_secure_cookie(text, salt):
-    secure_cookie = ''
-    for i in range(0, len(text), 8):
-        el = text[i:i+8]
-        secure_cookie += crypt.crypt(el, salt)
-    return secure_cookie
-
 def getKey():
    alph = string.printable
    secret = ""
